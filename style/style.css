@@ -12,7 +12,7 @@ html::-webkit-scrollbar {
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-image: url(/asset/antena_parabola.png);
+  background-image: url(../asset/antena_parabola.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
