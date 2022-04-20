@@ -173,7 +173,7 @@
                 <div class="data-idr d-none">
                     <div class="cover-content">
                         <div class="judul">
-                            <p>IDR TSEL ( Masalembu )</p>
+                            <p>IDR Tsel</p> <p class="sub-title">( Masalembu )</p>
                         </div>
                         <div class="input-cover">
                             <label for="remote_esno_masalembu">Remote Esno</label>
@@ -190,7 +190,7 @@
                     </div>
                     <div class="cover-content">
                         <div class="judul">
-                            <p>IDR TSEL ( Keramaian )</p>
+                            <p>IDR Tsel</p> <p class="sub-title">( Keramaian )</p>
                         </div>
                         <div class="input-cover">
                             <label for="remote_esno_keramaian">Remote Esno</label>
@@ -207,7 +207,7 @@
                     </div>
                     <div class="cover-content">
                         <div class="judul">
-                            <p>IDR TSEL ( Masalembu x patra )</p>
+                            <p>IDR Tsel</p> <p class="sub-title">( Masalembu patra )</p>
                         </div>
                         <div class="input-cover">
                             <label for="remote_esno_masalembu_patra">Remote Esno</label>
@@ -231,7 +231,7 @@
                         <a href="#" id="idr" class="btn-navigasi">IDR</a>
                     </div>
                     <div class="btn-coverkirim">
-                        <button type="submit" class="btn btn-primary btn-kirim">Simpan Checklist</button>
+                        <button type="submit" class="btn btn-outline-primary">Simpan Checklist</button>
                         <button class="btn btn-primary btn-loading d-none" type="button" disabled>
                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                         Loading...
@@ -340,6 +340,9 @@ Shift <p class="shift"></p> yang bertugas
         // const myAlert=document.querySelector('.modal');
         let tes="";
         let hasil="";
+        let dB = "dB";
+        let dBm = "dBm";
+        let watt = "Watt";
         function startTime() {
             const today = new Date();
             let h = today.getHours();
@@ -374,20 +377,20 @@ Shift <p class="shift"></p> yang bertugas
                 $('.shift').html($('#waktu_shift').val());
                 $('.jam_check').html($('#jam_checklist').val());
                 $('#sqf_id').html($('#sqf').val());
-                $('#attupcon_id').html($('#att_upcon').val());
-                $('#atthpa_id').html($('#att_hpa').val());
-                $('#outputhpa_id').html($('#output_hpa').val());
+                $('#attupcon_id').html($('#att_upcon').val() +" "+dB);
+                $('#atthpa_id').html($('#att_hpa').val() +" "+dB);
+                $('#outputhpa_id').html($('#output_hpa').val() +" "+watt);
                 
                 for (var i = 1; i <= 12; i++) {
-                    $('#remote_'+i).html($('#remote'+i).val());
-                    $('#local_'+i).html($('#local'+i).val());
-                    $('#power_'+i).html($('#power'+i).val());
+                    $('#remote_'+i).html($('#remote'+i).val()+" "+dB);
+                    $('#local_'+i).html($('#local'+i).val()+" "+dB);
+                    $('#power_'+i).html($('#power'+i).val()+" "+dBm);
                 } 
 
                 for (var i = 1; i <= 12; i++) {
-                    $('#remoteidr_'+i).html($('#remoteidr'+i).val());
-                    $('#localidr_'+i).html($('#localidr'+i).val());
-                    $('#poweridr_'+i).html($('#poweridr'+i).val());
+                    $('#remoteidr_'+i).html($('#remoteidr'+i).val()+" "+dB);
+                    $('#localidr_'+i).html($('#localidr'+i).val()+" "+dB);
+                    $('#poweridr_'+i).html($('#poweridr'+i).val()+" "+dBm);
                 } 
 
                 tes = $("#teks-wa").text();
