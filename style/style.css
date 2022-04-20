@@ -12,7 +12,7 @@ html::-webkit-scrollbar {
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-image: url(../asset/antena_parabola.png);
+  background-image: url(/asset/antena_parabola.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -82,6 +82,13 @@ body {
 
 .container-content .data-petugas .cover-content .judul p, .container-content .data-hubhx .cover-content .judul p, .container-content .data-csts .cover-content .judul p, .container-content .data-idr .cover-content .judul p {
   font-size: 1.125rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.container-content .data-petugas .cover-content .judul .sub-title, .container-content .data-hubhx .cover-content .judul .sub-title, .container-content .data-csts .cover-content .judul .sub-title, .container-content .data-idr .cover-content .judul .sub-title {
+  font-size: 14px;
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 600px) {
