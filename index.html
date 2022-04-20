@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="style/style.css">
+    <title>Checklist Surabaya</title>
+</head>
+<body>
+    <div class="container-content">
+        
+        <div class="header"></div>
+        <div class="main-content">
+            <!-- <div class="alert d-none my-alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Checklist sudah terkirim !
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>  -->
+        
+              <!-- Button trigger modal -->
+
+            <form action="" name="submit-to-google-sheet">
+                <h3>Checklist HUB</h3>
+                <div class="data-petugas">
+                    <div class="cover-content">
+                        <div class="judul judul-jam">
+                            <p>Nama Petugas Shift</p>
+                        </div>
+                        <div class="input-cover">
+                            <label for="nama">Waktu Checklist</label>
+                            <select name="waktu_shift" id="waktu_shift">
+                                <option value=""></option>
+                                <option value="pagi">Pagi</option>
+                                <option value="malam">Malam</option>
+                            </select>
+                        </div>
+                        <div class="cover-jaga">
+                            <div class="input-cover">
+                                <label for="nama">1. Nama</label>
+                                <input type="text" name="nama1" id="nama1">
+                            </div>
+                            <div class="input-cover">
+                                <label for="nama">2. Nama</label>
+                                <input type="text" name="nama2" id="nama2">
+                            </div>
+                            <div class="input-cover">
+                                <label for="nama">3. Nama</label>
+                                <input type="text" name="nama3" id="nama3">
+                            </div>
+                            <div class="input-cover">
+                                <label for="nama">4. Nama</label>
+                                <input type="text" name="nama4" id="nama4">
+                            </div>
+                            <div class="input-cover">
+                                <label for="nama">5. Nama</label>
+                                <input type="text" name="nama5" id="nama5">
+                            </div>
+                            <div class="input-cover">
+                                <label for="nama">6. Nama</label>
+                                <input type="text" name="nama6" id="nama6">
+                            </div>
+                            <div class="input-cover">
+                                <label for="nama">7. Nama</label>
+                                <input type="text" name="nama7" id="nama7">
+                            </div>
+                            <div class="input-cover">
+                                <label for="nama">8. Nama</label>
+                                <input type="text" name="nama8" id="nama8">
+                            </div>
+                            <div class="input-cover">
+                                <label for="nama">9. Nama</label>
+                                <input type="text" name="nama9" id="nama9">
+                            </div>
+                            <div class="input-cover">
+                                <label for="nama">10. Nama</label>
+                                <input type="text" name="nama10" id="nama10">
+                            </div>
+                            <div class="input-cover">
+                                <label for="nama">11. Nama</label>
+                                <input type="text" name="nama11" id="nama11">
+                            </div>
+                            <div class="input-cover">
+                                <label for="nama">12. Nama</label>
+                                <input type="text" name="nama12" id="nama12">
+                            </div>
+                            <input type="hidden" name="jam_checklist" id="jam_checklist">
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="data-hubhx d-none">
+                    <div class="cover-content">
+                        <div class="judul">
+                            <p>HUB HX</p>
+                        </div>
+                        <div class="input-cover">
+                            <div class="input-cover">
+                                <label for="sqf">SQF</label>
+                                <input type="text" name="sqf" id="sqf">
+                            </div>
+                            <div class="input-cover">
+                                <label for="att_upcon">Att Upcon</label>
+                                <input type="text" name="att_upcon" id="att_upcon">
+                            </div>
+                            <div class="input-cover">
+                                <label for="att_hpa">Att HPA</label>
+                                <input type="text" name="att_hpa" id="att_hpa">
+                            </div>
+                            <div class="input-cover">
+                                <label for="output_hpa">Output HPA</label>
+                                <input type="text" name="output_hpa" id="output_hpa">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-csts d-none">
+                    <div class="cover-content">
+                        <div class="judul">
+                            <p>CSTS 75c</p>
+                        </div>
+                        <div class="input-cover">
+                            <label for="remote_esno_75c">Remote Esno</label>
+                            <input type="text" name="remote_esno_75c" id="remote1">
+                        </div>
+                        <div class="input-cover">
+                            <label for="local_esno_75c">Local Esno</label>
+                            <input type="text" name="local_esno_75c" id="local1">
+                        </div>
+                        <div class="input-cover">
+                            <label for="power_75c">Power</label>
+                            <input type="text" name="power_75c" id="power1">
+                        </div>
+                    </div>
+                    <div class="cover-content">
+                        <div class="judul">
+                            <p>CSTS 50</p>
+                        </div>
+                        <div class="input-cover">
+                            <label for="remote_esno_50">Remote Esno</label>
+                            <input type="text" name="remote_esno_50" id="remote2">
+                        </div>
+                        <div class="input-cover">
+                            <label for="local_esno_50">Local Esno</label>
+                            <input type="text" name="local_esno_50" id="local2">
+                        </div>
+                        <div class="input-cover">
+                            <label for="power_50">Power</label>
+                            <input type="text" name="power_50" id="power2">
+                        </div>
+                    </div>
+                    <div class="cover-content">
+                        <div class="judul">
+                            <p>CSTS 10</p>
+                        </div>
+                        <div class="input-cover">
+                            <label for="remote_esno_10">Remote Esno</label>
+                            <input type="text" name="remote_esno_10" id="remote3">
+                        </div>
+                        <div class="input-cover">
+                            <label for="local_esno_10">Local Esno</label>
+                            <input type="text" name="local_esno_10" id="local3">
+                        </div>
+                        <div class="input-cover">
+                            <label for="power_50">Power</label>
+                            <input type="text" name="power_10" id="power3">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-idr d-none">
+                    <div class="cover-content">
+                        <div class="judul">
+                            <p>IDR Telkomsat ( Masalembu )</p>
+                        </div>
+                        <div class="input-cover">
+                            <label for="remote_esno_masalembu">Remote Esno</label>
+                            <input type="text" name="remote_esno_masalembu" id="remoteidr1">
+                        </div>
+                        <div class="input-cover">
+                            <label for="local_esno_masalembu">Local Esno</label>
+                            <input type="text" name="local_esno_masalembu" id="localidr1">
+                        </div>
+                        <div class="input-cover">
+                            <label for="power_masalembu">Power</label>
+                            <input type="text" name="power_masalembu" id="poweridr1">
+                        </div>
+                    </div>
+                    <div class="cover-content">
+                        <div class="judul">
+                            <p>IDR Telkomsel ( Keramaian )</p>
+                        </div>
+                        <div class="input-cover">
+                            <label for="remote_esno_keramaian">Remote Esno</label>
+                            <input type="text" name="remote_esno_keramaian" id="remoteidr2">
+                        </div>
+                        <div class="input-cover">
+                            <label for="local_esno_keramaian">Local Esno</label>
+                            <input type="text" name="local_esno_keramaian" id="localidr2">
+                        </div>
+                        <div class="input-cover">
+                            <label for="power_keramaian">Power</label>
+                            <input type="text" name="power_keramaian" id="poweridr2">
+                        </div>
+                    </div>
+                    <div class="cover-content">
+                        <div class="judul">
+                            <p>ID Telkomsel ( Masalembu x patra )</p>
+                        </div>
+                        <div class="input-cover">
+                            <label for="remote_esno_masalembu_patra">Remote Esno</label>
+                            <input type="text" name="remote_esno_masalembu_patra">
+                        </div>
+                        <div class="input-cover">
+                            <label for="local_esno_masalembu_patra">Local Esno</label>
+                            <input type="text" name="local_esno_masalembu_patra">
+                        </div>
+                        <div class="input-cover">
+                            <label for="power_masalembu_patra">Power</label>
+                            <input type="text" name="power_masalembu_patra">
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-cover">
+                    <div class="nav-link">
+                        <a href="#" id="petugas" class="btn-navigasi active">PETUGAS</a>
+                        <a href="#" id="hub" class="btn-navigasi">HUB HX</a>
+                        <a href="#" id="csts" class="btn-navigasi">CSTS</a>
+                        <a href="#" id="idr" class="btn-navigasi">IDR</a>
+                    </div>
+                    <div class="btn-coverkirim">
+                        <button type="submit" class="btn btn-primary btn-kirim">Simpan Checklist</button>
+                        <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        Loading...
+                        </button>
+                    </div>
+                </div> 
+            </form>  
+            
+            
+                  
+        </div>
+       
+    </div>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary d-none" id="btn-wa" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    btn wa
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Data berhasil disimpan !</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body"  >
+            <div class="modal-wa" id="teks-wa" >
+<pre >
+Yth, 
+Shift <p class="shift"></p> yang bertugas   
+    
+    1.  Nama    : <p id="nama_1"></p>
+    2.  Nama    : <p id="nama_2"></p>
+    3.  Nama    : <p id="nama_3"></p>
+    4.  Nama    : <p id="nama_4"></p>
+    5.  Nama    : <p id="nama_5"></p>
+    6.  Nama    : <p id="nama_6"></p>
+    7.  Nama    : <p id="nama_7"></p>
+    8.  Nama    : <p id="nama_8"></p>
+    9.  Nama    : <p id="nama_9"></p>
+    10. Nama    : <p id="nama_10"></p>
+    11. Nama    : <p id="nama_11"></p>
+    12. Nama    : <p id="nama_12"></p>
+    
+    • Pekerjaan Check list dari Shift <p class="shift"></p> Per jam 
+    <p class="jam_check"></p>  WIB
+    
+    1. Hub HX
+        SQF    	      : <p id="sqf_id"></p>
+        Att upcon      : <p id="attupcon_id"></p>
+        Att HPA         : <p id="atthpa_id"></p>
+        Output Hpa   : <p id="outputhpa_id"></p>
+    
+    2. CSTS 
+    a. Link 75c  
+        Remote Esno   : <p id="remote_1"></p>
+        Local Esno       : <p id="local_1"></p>
+        Power              : <p id="power_1"></p>
+    
+    b. Link 50
+        Remote Esno   : <p id="remote_2"></p>
+        Local Esno       : <p id="local_2"></p>
+        Power              : <p id="power_2"></p>
+        Note               : ACM ON  
+    
+    c. Link 10
+        Remote Esno    : <p id="remote_3"></p>
+        Local Esno        : <p id="local_3"></p>
+        Power 	         : <p id="power_3"></p> 
+            
+    3. IDR Telkomsel
+        a. Masalembu 
+            Remote Ebno  : <p id="remoteidr_1"></p>
+            Local Ebno      : <p id="localidr_1"></p>
+            Power 	           : <p id="poweridr_1"></p>
+    
+        b. Keramaian
+            Remote Ebno  : <p id="remoteidr_2"></p>
+            Local Ebno      : <p id="localidr_2"></p>
+            Power 	           : <p id="poweridr_2"></p>  
+            
+    
+    Demikian disampaikan, Terima kasih
+    Telkomsat Surabaya | +6281234564446
+    </pre>
+            </div>
+            <textarea id="simpan-teks" class="isi-teks" readonly></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="copy">Copy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/javascript.js"></script>
+    <script>
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwfxF7IWiOteJsNEiZ5ZdeC86QBmrUaVfa5lO4b1uHKcAFdcbwFK4C-OsYj6hfgg8Fe/exec'
+        const form = document.forms['submit-to-google-sheet'];
+        const btnKirim=document.querySelector('.btn-kirim');
+        const btnLoading=document.querySelector('.btn-loading');
+        // const myAlert=document.querySelector('.modal');
+        let tes="";
+        let hasil="";
+        let dt = new Date();
+        let time = dt.getHours() + ":" + dt.getMinutes();
+        $('#jam_checklist').val(time);
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          btnLoading.classList.toggle('d-none');
+          btnKirim.classList.toggle('d-none');
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                console.log('Success!', response);
+                btnLoading.classList.toggle('d-none');
+                btnKirim.classList.toggle('d-none');
+                // myAlert.classList.remove('d-none');
+                $('#btn-wa').trigger( "click" );
+                for (var i = 1; i <= 12; i++) {
+                    $('#nama_'+i).html($('#nama'+i).val());
+                } 
+
+                $('.shift').html($('#waktu_shift').val());
+                $('.jam_check').html($('#jam_checklist').val());
+                $('#sqf_id').html($('#sqf').val());
+                $('#attupcon_id').html($('#att_upcon').val());
+                $('#atthpa_id').html($('#att_hpa').val());
+                $('#outputhpa_id').html($('#output_hpa').val());
+                
+                for (var i = 1; i <= 12; i++) {
+                    $('#remote_'+i).html($('#remote'+i).val());
+                    $('#local_'+i).html($('#local'+i).val());
+                    $('#power_'+i).html($('#power'+i).val());
+                } 
+
+                for (var i = 1; i <= 12; i++) {
+                    $('#remoteidr_'+i).html($('#remoteidr'+i).val());
+                    $('#localidr_'+i).html($('#localidr'+i).val());
+                    $('#poweridr_'+i).html($('#poweridr'+i).val());
+                } 
+
+                tes = $("#teks-wa").text();
+                hasil = $("#simpan-teks").val(tes);
+                console.log(hasil);
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+
+        
+
+        $("#copy").click(function(){
+            
+            hasil.select();
+            console.log(hasil);
+            document.execCommand("copy"); 
+            alert("Copied On clipboard");
+        });
+        
+    </script>
+</body>
+</html>
