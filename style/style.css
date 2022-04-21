@@ -12,7 +12,7 @@ html::-webkit-scrollbar {
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-image: url(../asset/antena_parabola.png);
+  background-image: url(/asset/antena_parabola.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -175,7 +175,7 @@ body {
 }
 
 .container-content form .cover-jaga .input-cover label {
-  color: #505050;
+  color: #383838;
   font-weight: 500;
 }
 
@@ -193,6 +193,9 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 10px;
+  color: #4b4b4b;
+  font-weight: 500;
+  outline-color: #350179;
 }
 
 .container-content .btn-cover {
