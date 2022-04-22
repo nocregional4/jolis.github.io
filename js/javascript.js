@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    const dataPetugas=
     $('.btn-navigasi').click(function(e){
         e.preventDefault();
         $('.btn-navigasi').removeClass('active');
@@ -27,6 +26,12 @@ $(document).ready(function(){
             $('.data-csts').addClass('d-none');
             $('.data-petugas').removeClass('d-none');
         }
+    });
+
+    $('#btn-reset-petugas').click(function(){
+        for (var i = 1; i <= 12; i++) {
+            $('#nama'+i).val("");
+        } 
     });
 
   
