@@ -91,10 +91,62 @@ body {
   font-weight: 500;
 }
 
+.container-content .data-petugas .cover-content .judul-btn-jaga, .container-content .data-hubhx .cover-content .judul-btn-jaga, .container-content .data-csts .cover-content .judul-btn-jaga, .container-content .data-idr .cover-content .judul-btn-jaga {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr auto;
+      grid-template-columns: 1fr auto;
+}
+
+.container-content .data-petugas .cover-content .judul-btn-jaga .cover-btn-reset a, .container-content .data-hubhx .cover-content .judul-btn-jaga .cover-btn-reset a, .container-content .data-csts .cover-content .judul-btn-jaga .cover-btn-reset a, .container-content .data-idr .cover-content .judul-btn-jaga .cover-btn-reset a {
+  text-decoration: none;
+  display: -ms-grid;
+  display: grid;
+  padding: 10px 16px;
+  border: 1px solid #747474;
+  color: #747474;
+  border-radius: 10px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.container-content .data-petugas .cover-content .judul-btn-jaga .cover-btn-reset a:hover, .container-content .data-hubhx .cover-content .judul-btn-jaga .cover-btn-reset a:hover, .container-content .data-csts .cover-content .judul-btn-jaga .cover-btn-reset a:hover, .container-content .data-idr .cover-content .judul-btn-jaga .cover-btn-reset a:hover {
+  background-color: #350179;
+  color: #fff;
+}
+
 @media only screen and (max-width: 600px) {
   .container-content .data-petugas .cover-content, .container-content .data-hubhx .cover-content, .container-content .data-csts .cover-content, .container-content .data-idr .cover-content {
     padding: 16px;
   }
+}
+
+.container-content .data-petugas .cover-btn-aksi, .container-content .data-hubhx .cover-btn-aksi, .container-content .data-csts .cover-btn-aksi, .container-content .data-idr .cover-btn-aksi {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto 1fr;
+      grid-template-columns: auto auto auto auto 1fr;
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 20px;
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+}
+
+.container-content .data-petugas .cover-btn-aksi a, .container-content .data-hubhx .cover-btn-aksi a, .container-content .data-csts .cover-btn-aksi a, .container-content .data-idr .cover-btn-aksi a {
+  text-decoration: none;
+  display: -ms-grid;
+  display: grid;
+  padding: 10px 16px;
+  color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.container-content .data-petugas .cover-btn-aksi a:hover, .container-content .data-hubhx .cover-btn-aksi a:hover, .container-content .data-csts .cover-btn-aksi a:hover, .container-content .data-idr .cover-btn-aksi a:hover {
+  background-color: #350179;
+  color: #fff;
 }
 
 @media only screen and (max-width: 600px) {
@@ -201,11 +253,13 @@ body {
 .container-content .btn-cover {
   display: -ms-grid;
   display: grid;
-  margin-left: 20px;
-  position: fixed;
-  top: 70px;
-  right: -220px;
-  width: 200px;
+  -ms-grid-columns: 1fr auto;
+      grid-template-columns: 1fr auto;
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+  position: relative;
+  border-radius: 20px;
+  background-color: #fff;
 }
 
 @media only screen and (max-width: 600px) {
@@ -215,12 +269,12 @@ body {
 }
 
 .container-content .btn-cover .nav-link {
-  background-color: #fff;
-  border-radius: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
   padding: 16px;
-  margin-bottom: 20px;
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  justify-self: flex-start;
 }
 
 .container-content .btn-cover .nav-link a {
@@ -238,15 +292,21 @@ body {
 
 .container-content .btn-cover .nav-link a.active {
   color: #1e0342;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .container-content .btn-cover .btn-coverkirim {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #fff;
-  padding: 16px;
   border-radius: 20px;
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 0 16px;
 }
 
 .container-content .btn-cover .btn-coverkirim .btn {
