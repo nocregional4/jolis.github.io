@@ -649,7 +649,6 @@ Shift <p class="shift"></p> yang bertugas
         })
 
         
-
         $("#copy").click(function(){
             
             hasil.select();
@@ -657,6 +656,13 @@ Shift <p class="shift"></p> yang bertugas
             document.execCommand("copy"); 
             alert("Copied On clipboard");
         });
+        
+        $('#btn-reset-petugas').click(function(e){
+            e.preventDefault();
+        for (var i = 1; i <= 12; i++) {
+            $('#nama'+i).val("");
+        } 
+    });
         
     </script>
 </body>
