@@ -161,7 +161,7 @@
                             </div>
                             <div class="input-cover">
                                 <label for="nama">6. Nama</label>
-                                <select name="nama6" id="nama5">
+                                <select name="nama6" id="nama6">
                                     <option value=""></option>
                                     <option value="Angga">Angga</option>
                                     <option value="Adrian">Adrian</option>
@@ -649,6 +649,7 @@ Shift <p class="shift"></p> yang bertugas
         })
 
         
+
         $("#copy").click(function(){
             
             hasil.select();
@@ -656,13 +657,6 @@ Shift <p class="shift"></p> yang bertugas
             document.execCommand("copy"); 
             alert("Copied On clipboard");
         });
-        
-        $('#btn-reset-petugas').click(function(e){
-            e.preventDefault();
-        for (var i = 1; i <= 12; i++) {
-            $('#nama'+i).val("");
-        } 
-    });
         
     </script>
 </body>
