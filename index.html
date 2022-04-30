@@ -468,13 +468,14 @@
                 </div>
                 <div class="btn-cover">
                     <div class="nav-link">
-                        <a href="#" id="petugas" class="btn-navigasi active">PETUGAS</a>
-                        <a href="#" id="hub" class="btn-navigasi">HUB HX</a>
-                        <a href="#" id="csts" class="btn-navigasi">CSTS</a>
-                        <a href="#" id="idr" class="btn-navigasi">IDR</a>
+                        <a href="#" id="petugas" class="btn-navigasi active"><span>1</span>   PETUGAS</a>
+                        <a href="#" id="hub" class="btn-navigasi"><span>2</span>HUB HX</a>
+                        <a href="#" id="csts" class="btn-navigasi"><span>3</span>CSTS</a>
+                        <a href="#" id="idr" class="btn-navigasi"><span>4</span>IDR</a>
                     </div>
-                    <div class="btn-coverkirim">
-                        <button type="submit" class="btn btn-outline-primary btn-kirim">Simpan Checklist</button>
+                    <div class="btn-coverkirim d-none">
+                        <button type="button" class="btn btn-primary save-check" data-bs-toggle="modal" data-bs-target="#exampleModal">Simpan checklist</button>
+                        <button type="submit" id="btn-kirim-checklist" class="btn btn-outline-primary btn-kirim d-none"></button>
                         <button class="btn btn-primary btn-loading d-none" type="button" disabled>
                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                         Loading...
@@ -576,6 +577,31 @@ Shift <p class="shift"></p> yang bertugas
       </div>
     </div>
   </div>
+
+  <!-- Button trigger modal -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Apakah anda yakin menyimpan checklist ini?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-primary" id="simpan-checklist" data-bs-dismiss="modal">Simpan</button>
+          <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Loading...
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/javascript.js"></script>
@@ -585,6 +611,7 @@ Shift <p class="shift"></p> yang bertugas
         const form = document.forms['submit-to-google-sheet'];
         const btnKirim=document.querySelector('.btn-kirim');
         const btnLoading=document.querySelector('.btn-loading');
+        const btnSave = document.querySelector('.save-check');
         // const myAlert=document.querySelector('.modal');
         let tes="";
         let hasil="";
@@ -607,15 +634,20 @@ Shift <p class="shift"></p> yang bertugas
         return i;
         }
         // $('#jam_checklist').val(time);
+
+        $('#simpan-checklist').click(function(){
+            $('#btn-kirim-checklist').trigger('click');
+        });
+
         form.addEventListener('submit', e => {
           e.preventDefault();
           btnLoading.classList.toggle('d-none');
-          btnKirim.classList.toggle('d-none');
+          btnSave.classList.toggle('d-none');
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => {
                 console.log('Success!', response);
                 btnLoading.classList.toggle('d-none');
-                btnKirim.classList.toggle('d-none');
+                btnSave.classList.toggle('d-none');
                 // myAlert.classList.remove('d-none');
                 $('#btn-wa').trigger( "click" );
                 for (var i = 1; i <= 12; i++) {
@@ -656,6 +688,12 @@ Shift <p class="shift"></p> yang bertugas
             console.log(hasil);
             document.execCommand("copy"); 
             alert("Copied On clipboard");
+        });
+
+        $("#btn-reset-petugas").click(function(){
+            for (var i = 1; i <= 12; i++) {
+                    $('#nama'+i).val("");
+                } 
         });
         
     </script>
