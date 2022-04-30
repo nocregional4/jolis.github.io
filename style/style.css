@@ -280,6 +280,16 @@ body {
 .container-content .btn-cover .nav-link a {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
   width: 100%;
   padding: 10px 16px;
   -ms-grid-column-align: start;
@@ -290,9 +300,32 @@ body {
   color: rgba(0, 0, 0, 0.4);
 }
 
+.container-content .btn-cover .nav-link a span {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+  width: 30px;
+  background-color: #fff;
+  border: 0.5px solid rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+}
+
 .container-content .btn-cover .nav-link a.active {
   color: #1e0342;
   font-weight: 700;
+}
+
+.container-content .btn-cover .nav-link a.active span {
+  background-color: #fd2e6c;
+  border-radius: 50%;
+  color: #fff;
+  border: 0.5px solid rgba(0, 0, 0, 0.4);
 }
 
 .container-content .btn-cover .btn-coverkirim {
