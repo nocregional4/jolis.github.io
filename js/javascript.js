@@ -9,22 +9,26 @@ $(document).ready(function(){
             $('.data-csts').addClass('d-none');
             $('.data-idr').addClass('d-none');
             $('.data-hubhx').removeClass('d-none');
+            $('.btn-coverkirim').addClass('d-none');
         }else if(myId =="csts"){
             $('.data-petugas').addClass('d-none');
             $('.data-hubhx').addClass('d-none');
             $('.data-idr').addClass('d-none');
             $('.data-csts').removeClass('d-none');
+            $('.btn-coverkirim').addClass('d-none');
         }
         else if(myId =="idr"){
             $('.data-petugas').addClass('d-none');
             $('.data-hubhx').addClass('d-none');
             $('.data-csts').addClass('d-none');
             $('.data-idr').removeClass('d-none');
+            $('.btn-coverkirim').removeClass('d-none');
         }else{
             $('.data-idr').addClass('d-none');
             $('.data-hubhx').addClass('d-none');
             $('.data-csts').addClass('d-none');
             $('.data-petugas').removeClass('d-none');
+            $('.btn-coverkirim').addClass('d-none');
         }
     });  
 });
