@@ -57,6 +57,11 @@ body {
   color: #fff;
 }
 
+.container-content .main-content img {
+  width: 8.125rem;
+  margin-bottom: 2.5rem;
+}
+
 @media only screen and (max-width: 600px) {
   .container-content .main-content {
     width: 100%;
