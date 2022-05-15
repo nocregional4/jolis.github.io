@@ -57,9 +57,57 @@ body {
   color: #fff;
 }
 
-.container-content .main-content img {
-  width: 8.125rem;
+.container-content .main-content .cover-head {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr auto;
+      grid-template-columns: 1fr auto;
   margin-bottom: 2.5rem;
+}
+
+.container-content .main-content .cover-head img {
+  width: 8.125rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.container-content .main-content .cover-head .cover-btn-menu {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.container-content .main-content .cover-head .cover-btn-menu a {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  color: #b8b8b8;
+  text-decoration: none;
+}
+
+.container-content .main-content .cover-head .cover-btn-menu a span {
+  margin-top: 10px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border-radius: 50%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.container-content .main-content .cover-head .cover-btn-menu a.active {
+  font-weight: 600;
+  color: #fff;
+}
+
+.container-content .main-content .cover-head .cover-btn-menu a.active span {
+  background-color: #ff1764;
 }
 
 @media only screen and (max-width: 600px) {
@@ -350,5 +398,11 @@ body {
 .container-content .btn-cover .btn-coverkirim .btn {
   width: 100%;
   border-radius: 8px;
+}
+
+.container-content .tabel-checklist {
+  background: #fff;
+  border-radius: 1.25rem;
+  padding: 16px;
 }
 /*# sourceMappingURL=style.css.map */
